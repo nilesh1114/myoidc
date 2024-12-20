@@ -44,7 +44,4 @@ jobs:
       - name: Terraform Apply
         run: terraform apply -auto-approve
 
-      # Optional: Destroy resources when desired (can be triggered separately)
-      - name: Terraform Destroy
-        run: terraform destroy -auto-approve
-        #if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+     
