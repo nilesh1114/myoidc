@@ -30,7 +30,7 @@ resource "aws_internet_gateway" "main" {
 }
 
 resource "aws_eip" "main" {
-  vpc = true
+  domain = "vpc"
 }
 
 resource "aws_nat_gateway" "main" {
@@ -95,9 +95,8 @@ resource "aws_security_group" "web_security_group" {
 }
 
 resource "aws_instance" "web_server" {
-  ami                    = "ami-0c55b159cbfafe1f0"  # Replace with a valid Amazon Linux AMI ID
+  ami                    = "ami-0453ec754f44f9a4a"  # Replace with a valid Amazon Linux AMI ID
   instance_type           = "t2.micro"
-  key_name                = "your-key-name"
   subnet_id               = aws_subnet.private_subnet.id
   security_groups         = [aws_security_group.web_security_group.name]
   associate_public_ip_address = false
