@@ -99,7 +99,6 @@ resource "aws_instance" "web_server" {
   ami                    = "ami-0453ec754f44f9a4a"  # Replace with a valid Amazon Linux AMI ID
   instance_type           = "t2.micro"
   subnet_id               = aws_subnet.private_subnet.id
-  security_groups         = [aws_security_group.web_security_group.name]
   associate_public_ip_address = false
 
   user_data = <<-EOF
