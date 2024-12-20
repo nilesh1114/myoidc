@@ -70,6 +70,7 @@ resource "aws_route_table_association" "private_association" {
 
 resource "aws_security_group" "web_security_group" {
   name        = "web-sg"
+  vpc_id      = aws_vpc.main.id
   description = "Allow HTTP and SSH traffic"
 
   ingress {
