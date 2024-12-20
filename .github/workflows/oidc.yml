@@ -28,7 +28,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: arn:aws:iam::894577165213:role/powertool
-          aws-region: us-west-2
+          aws-region: us-east-1
           audience: sts.amazonaws.com
           #aws-region: ${{ secrets.AWS_REGION }}
 
